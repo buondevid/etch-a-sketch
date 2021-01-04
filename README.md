@@ -1,2 +1,2 @@
-# etch-a-sketch
+# Etch-a-Sketch
 A simple Etch-a-Sketch app to unleash your imagination!
