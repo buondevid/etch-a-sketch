@@ -11,8 +11,36 @@ html {
 }
 
 body {
-	min-height: 100%;
-	min-height: 100vh;
+	height: 100%;
+	width: 100%;
 	line-height: 1.5;
 	font-size: 2rem;
+	padding: 8rem;
+	border: .2rem solid black;
+}
+
+#grid-wrapper {
+	display:grid;
+	grid-template: repeat(16, 1fr) / repeat(16, 1fr);
+	border: 1rem solid black;
+	margin: auto;
+	height: 60vmin;
+	width: 60vmin;
+}
+
+.grid-div {
+	border: .1rem solid red;
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+}
+
+.black {
+	background-color: black;
+}
+
+form {
+	display: inline-block;
+	text-align:center;
+	border: 0.2rem black solid;
 }
