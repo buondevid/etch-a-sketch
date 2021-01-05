@@ -2,7 +2,15 @@ const gridWrapper = document.getElementById('grid-wrapper');
 const allGridDiv = document.getElementsByClassName('grid-div');
 let gridDiv;
 
-// creates grid and tracks hover
+function resetGrid() {
+	gridWrapper.innerHTML = '';
+}
+
+function getRandom() {
+	return Math.floor(Math.random() * 256);
+}
+
+/* ---------------------- creates grid  e runs default --------------------- */
 function createGrid(n) {
 	const powNumber = n ** 2;
 	for (let i = 0; i < powNumber; i++) {
@@ -10,11 +18,14 @@ function createGrid(n) {
 		gridDiv.classList.add('grid-div');
 		gridWrapper.appendChild(gridDiv);
 	}
-	/* Array.from(allGridDiv).forEach((e) => e.addEventListener('mouseover', () => e.classList.add('black'))); */
 }
 createGrid(16);
 
-/* ----------- EVENT DELEGATION to color grid - alternative method ----------
+/* -----------------Alternatives: Html5 collection to color-----------------------------
+
+Array.from(allGridDiv).forEach((e) => e.addEventListener('mouseover', () => e.classList.add('black')));
+
+ -------------EVENT DELEGATION to color grid - alternative method-------
 
 gridWrapper.addEventListener(
 	'mouseover', (e) => {
@@ -26,45 +37,26 @@ gridWrapper.addEventListener(
 const gridRange = document.getElementById('square-range');
 const pRange = document.getElementById('p-range');
 
+/* ------------------------------ Reset button ------------------------------ */
+document.getElementById('reset').addEventListener('click', () => {
+	resetGrid(); createGrid(gridRange.value);
+});
+
+/* ----------------------- Input listener to resize the board ----------------------- */
 gridRange.addEventListener('mouseup', () => {
 	pRange.textContent = gridRange.value; // update Input Range p.value
 	const number = gridRange.value; // assignin to Number user's input value
-	gridWrapper.innerHTML = '';	// delete all div
+	resetGrid();	// delete all div
 	createGrid(number); // create new grid with user's input
 	gridWrapper.setAttribute('style', `grid-template: repeat(${number}, 1fr) / repeat(${number}, 1fr);`); // resizing grid
 });
 
-function getRandom() {
-	return Math.floor(Math.random() * 256);
-}
-
-/* function rainbow() {
-	Array.from(allGridDiv).forEach(
-		(e) => {
-			e.removeEventListener('mouseover', () => e.classList.add('black'));
-			e.addEventListener('mouseover',
-				() => e.setAttribute('style', `background-color: rgb(${getRandom()}, ${getRandom()}, ${getRandom()})`));
-		},
-	);
-} */
-
-/* function shades() {
-	Array.from(allGridDiv).forEach(
-		(e) => {
-			e.removeEventListener('mouseover', () => e.classList.add('black'));
-			e.removeEventListener('mouseover',
-				() => e.setAttribute('style', `background-color: rgb(${getRandom()}, ${getRandom()}, ${getRandom()})`));
-			e.addEventListener('mouseover',
-				() => e.setAttribute('style', `background-color: rgba(0, 0, 0, ${0.1}`));
-		},
-	);
-} */
-
 let color;
 const buttons = document.querySelectorAll('.buttons');
 
-buttons.forEach((e) => e.addEventListener('click', () => {
-	color = e.textContent.toLowerCase();
+/* ------------------------ Buttons' events listeners ----------------------- */
+buttons.forEach((b) => b.addEventListener('click', () => {
+	color = b.textContent.toLowerCase();
 	if (color === 'rubber') {
 		Array.from(allGridDiv).forEach(
 			(grid) => {
@@ -95,14 +87,12 @@ buttons.forEach((e) => e.addEventListener('click', () => {
 				g.addEventListener('mouseover',
 					() => {
 						if (g.style.backgroundColor.match(/rgba/)) {
-							let currentOpacity = +(g.style.backgroundColor.slice(-4, -1));
-							console.log(currentOpacity);
-							if (currentOpacity <= 0.9) {
-								g.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity + 0.2})`;
-								
-								
+							const currentOpacity = +(g.style.backgroundColor.slice(-4, -1));
+							g.classList.add('darken');
+							if (currentOpacity <= 0.9 || g.classList.contains('darken')) {
+								g.style.backgroundColor = `rgba(0, 0, 0, ${currentOpacity + 0.1})`;
 							}
-						} else { g.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'; }
+						} else if (!g.style.backgroundColor.match(/rgb/)) { g.style.backgroundColor = 'rgba(0, 0, 0, 0.1)'; }
 					});
 			},
 		);

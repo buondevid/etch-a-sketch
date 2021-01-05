@@ -9,15 +9,19 @@
 </head>
 
 <body>
+	<h1 id='title'>Etch-a-Sketch</h1>
+	<div id='inputs-wrapper'>
 	<form>
 		<label for='square-range'>Select the number of squares per side:<br></label>
 		<input id='square-range' type=range min='3' max='100' step='1' value='16'>
 		<p id='p-range'>16</p>
 	</form>
-	<button class='buttons'>Rainbow</button>
-	<button class='buttons'>Shades</button>
-	<button class='buttons'>Black</button>
-	<button class='buttons'>Rubber</button>
+	<button class='buttons inputs'>Rainbow</button>
+	<button class='buttons inputs'>Shades</button>
+	<button class='buttons inputs'>Black</button>
+	<button class='buttons inputs'>Rubber</button>
+	<button id='reset' class='inputs'>Reset</button>
+</div>
 
 	<div id="page-wrapper">
 		<div id='grid-wrapper'>
