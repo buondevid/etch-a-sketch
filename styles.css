@@ -34,19 +34,22 @@ body {
 	align-items: center;
 	justify-content: space-evenly;
 	background:linear-gradient(45deg, #205d7e, #205d7e, #659dbd);
+	flex-wrap: wrap;
 }
 
 #title {
 	position: fixed;
-	left: 5rem;
+	top: 8rem;
+	left: 3rem;
 	display: block;
 	writing-mode: vertical-rl;
 	z-index: 10;
 	color: #7b0828;
-	font-size: 8rem;
+	font-size: 6vmin;
 	opacity: 0.6;
 	letter-spacing:0.5rem;
 	pointer-events: none;
+	line-height:1;
 }
 
 #inputs-wrapper {
@@ -66,7 +69,7 @@ body {
 
 #inputs-wrapper:hover {
 	transform: scale(1.1);
-	background: rgba(221,231,238, 0.3);
+	background: rgba(221,231,238, 0.5);
 	box-shadow: 0rem 0rem 0.8rem whitesmoke;
 }
 
@@ -88,11 +91,13 @@ body {
 #grid-wrapper {
 	display:grid;
 	grid-template: repeat(16, 1fr) / repeat(16, 1fr);
-	border: 1rem solid black;
+	border: 1rem solid #daad86;
+	border-radius: 2rem;
 	margin: 2rem auto;
 	height: 80vmin;
 	width: 80vmin;
 	background-color: whitesmoke;
+	box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.795)
 }
 
 .grid-div {
@@ -100,8 +105,9 @@ body {
 	display: inline-block;
 	height: 100%;
 	width: 100%;
-	cursor:crosshair;
+	cursor: crosshair;
 	background: rgba(0, 0, 0, 0.0);
+	border-radius: 1rem;
 }
 
 .black {
