@@ -10,6 +10,12 @@ function getRandom() {
 	return Math.floor(Math.random() * 256);
 }
 
+function cloneGrid() {
+	const el = allGridDiv;
+	const elClone = el.cloneNode(true);
+	el.gridWrapper.replaceChild(elClone, el);
+}
+
 /* ---------------------- creates grid  e runs default --------------------- */
 function createGrid(n) {
 	const powNumber = n ** 2;
