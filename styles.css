@@ -68,7 +68,7 @@ body {
 }
 
 #inputs-wrapper:hover {
-	transform: scale(1.1);
+	transform: scale(1.05);
 	background: rgba(221,231,238, 0.5);
 	box-shadow: 0rem 0rem 0.8rem whitesmoke;
 }
@@ -97,17 +97,18 @@ body {
 	height: 80vmin;
 	width: 80vmin;
 	background-color: whitesmoke;
-	box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.795)
+	box-shadow: -5px 5px 10px rgba(0, 0, 0, 0.795);
+	touch-action: none; 
 }
 
 .grid-div {
-	border: .05rem dotted lightgray;
+	border: .1rem dotted lightgray;
 	display: inline-block;
 	height: 100%;
 	width: 100%;
 	cursor: crosshair;
 	background: rgba(0, 0, 0, 0.0);
-	border-radius: 1rem;
+	border-radius: 30%;
 }
 
 .black {
