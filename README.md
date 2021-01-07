@@ -3,13 +3,16 @@
 <p align="center">
   <img src="/Images/Canvas.png" width="450" height="450"alt="App Canvas">
 </p>
-   
-<br>
-  
+
+<p align="center">
+  <img src="/Images/heart.png" width="450" height="450"alt="App Heart drawing">
+</p>
+
 <p align="center">
   <img src="/Images/Menu.png" width="450" height="450" alt="App Menu">
 </p>
-   
+
+<br>
 This tool was created using only HTML, CSS and Vanilla JS.
 
 This project is part of The __Odin Project's curriculum__ to become a Full Stack Developer!
