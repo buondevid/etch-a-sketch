@@ -2,11 +2,11 @@
 
 
 
-<img src="/Images/Canvas.png" width=450 height=450 align=center alt='App Canvas'>
+<img src="/Images/Canvas.png" width=450 height=450 align='center' alt='App Canvas'>
 
 <br>
 
-<img src="/Images/Menu.png" width=450 height=450 align=center alt='App Menu'>
+<img src="/Images/Menu.png" width=450 height=450 align='center' alt='App Menu'>
 
 This tool was created using only HTML, CSS and Vanilla JS.
 
