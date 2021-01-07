@@ -1,4 +1,4 @@
-<h1 align="center">Etch-a-Sketch</h1>
+<h1 align="center">Etch-a-Sketch :pen:</h1>
 
 <p align="center">
   <img src="/Images/Canvas.png" width="450" height="450"alt="App Canvas">
