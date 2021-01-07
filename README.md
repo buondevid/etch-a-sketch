@@ -2,11 +2,11 @@
 
 
 
-![App Canvas](/Images/Canvas.png)
+<img src="/Images/Canvas.png" width=450 height=450 align=center alt='App Canvas'>
 
 <br>
 
-![App Menu](/Images/Menu.png)
+<img src="/Images/Menu.png" width=450 height=450 align=center alt='App Menu'>
 
 This tool was created using only HTML, CSS and Vanilla JS.
 
