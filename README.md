@@ -1,13 +1,15 @@
-# Etch-a-Sketch :pen:
+<h1 align="center">Etch-a-Sketch</h1>
 
-
-
-<img src="/Images/Canvas.png" width=450 height=450 align='center' alt='App Canvas'>
-
+<p align="center">
+  <img src="/Images/Canvas.png" width="450" height="450"alt="App Canvas">
+</p>
+   
 <br>
-
-<img src="/Images/Menu.png" width=450 height=450 align='center' alt='App Menu'>
-
+  
+<p align="center">
+  <img src="/Images/Menu.png" width="450" height="450" alt="App Menu">
+</p>
+   
 This tool was created using only HTML, CSS and Vanilla JS.
 
 This project is part of The __Odin Project's curriculum__ to become a Full Stack Developer!
