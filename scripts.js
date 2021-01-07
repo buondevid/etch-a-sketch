@@ -81,7 +81,6 @@ const buttons = document.querySelectorAll('.buttons');
 buttons.forEach((b) => b.addEventListener('click', () => {
 	let colorFunc;
 	color = b.textContent.toLowerCase();
-	console.log(color);
 
 	if (color === 'rubber') {
 		colorFunc = rubberOver;
