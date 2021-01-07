@@ -18,7 +18,7 @@ The style is pretty basic but functional, I aimed to make it look clean.
 
 :link: **Live preview:** [here](https://buondevid.github.io/etch-a-sketch/)
 
-:book: __Repo__ [here](https://github.com/buondevid/etch-a-sketch)
+:book: __Repo__: [here](https://github.com/buondevid/etch-a-sketch)
 
 ## Stack & Tools
 
