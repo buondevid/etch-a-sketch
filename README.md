@@ -2,6 +2,12 @@
 
 
 
+![App Canvas](/Images/Canvas.png)
+
+<br>
+
+![App Menu](/Images/Menu.png)
+
 This tool was created using only HTML, CSS and Vanilla JS.
 
 This project is part of The __Odin Project's curriculum__ to become a Full Stack Developer!
