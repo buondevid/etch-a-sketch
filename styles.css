@@ -92,6 +92,7 @@ body {
 	display:grid;
 	grid-template: repeat(16, 1fr) / repeat(16, 1fr);
 	border: 1rem solid #daad86;
+	border-style: inset;
 	border-radius: 2rem;
 	margin: 2rem auto;
 	height: 80vmin;
@@ -108,7 +109,6 @@ body {
 	width: 100%;
 	cursor: crosshair;
 	background: rgba(0, 0, 0, 0.0);
-	border-radius: 30%;
 }
 
 .black {
